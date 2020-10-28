@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <include
+        android:id="@+id/box100"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box81"
+        app:layout_constraintEnd_toStartOf="@+id/box99"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <include
+        android:id="@+id/box99"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box79"
+        app:layout_constraintEnd_toStartOf="@+id/box98"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <include
+        android:id="@+id/box98"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box83"
+        app:layout_constraintEnd_toStartOf="@+id/box97"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box99"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <include
+        android:id="@+id/box97"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box84"
+        app:layout_constraintEnd_toStartOf="@+id/box96"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box98"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/box96"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box85"
+        app:layout_constraintEnd_toStartOf="@+id/box95"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box97"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/box95"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box86"
+        app:layout_constraintEnd_toStartOf="@+id/box94"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box96"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/box94"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box87"
+        app:layout_constraintEnd_toStartOf="@+id/box93"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box95"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/box93"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box88"
+        app:layout_constraintEnd_toStartOf="@+id/box92"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box94"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/box92"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box89"
+        app:layout_constraintEnd_toStartOf="@+id/box91"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box93"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/box91"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box92"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/box81"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box80"
+        app:layout_constraintEnd_toStartOf="@+id/box82"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box100" />
+
+    <include
+        android:id="@+id/box82"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/box79"
+        app:layout_constraintEnd_toStartOf="@+id/box83"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box81"
+        app:layout_constraintTop_toBottomOf="@+id/box99" />
+
+    <include
+        android:id="@+id/box83"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box78"
+        app:layout_constraintEnd_toStartOf="@+id/box84"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box82"
+        app:layout_constraintTop_toBottomOf="@+id/box98" />
+
+    <include
+        android:id="@+id/box84"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box77"
+        app:layout_constraintEnd_toStartOf="@+id/box85"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box83"
+        app:layout_constraintTop_toBottomOf="@+id/box97" />
+
+    <include
+        android:id="@+id/box85"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box76"
+        app:layout_constraintEnd_toStartOf="@+id/box86"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box84"
+        app:layout_constraintTop_toBottomOf="@+id/box96" />
+
+    <include
+        android:id="@+id/box86"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box75"
+        app:layout_constraintEnd_toStartOf="@+id/box87"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box85"
+        app:layout_constraintTop_toBottomOf="@+id/box95" />
+
+    <include
+        android:id="@+id/box87"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box74"
+        app:layout_constraintEnd_toStartOf="@+id/box88"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box86"
+        app:layout_constraintTop_toBottomOf="@+id/box94" />
+
+    <include
+        android:id="@+id/box88"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box73"
+        app:layout_constraintEnd_toStartOf="@+id/box89"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box87"
+        app:layout_constraintTop_toBottomOf="@+id/box93" />
+
+    <include
+        android:id="@+id/box89"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box72"
+        app:layout_constraintEnd_toStartOf="@+id/box90"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box88"
+        app:layout_constraintTop_toBottomOf="@+id/box92" />
+
+    <include
+        android:id="@+id/box90"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box71"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box89"
+        app:layout_constraintTop_toBottomOf="@+id/box91" />
+
+    <include
+        android:id="@+id/box80"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box61"
+        app:layout_constraintEnd_toStartOf="@+id/box79"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box81" />
+
+    <include
+        android:id="@+id/box79"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box62"
+        app:layout_constraintEnd_toStartOf="@+id/box78"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box80"
+        app:layout_constraintTop_toBottomOf="@+id/box99" />
+
+    <include
+        android:id="@+id/box78"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box63"
+        app:layout_constraintEnd_toStartOf="@+id/box77"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box79"
+        app:layout_constraintTop_toBottomOf="@+id/box83" />
+
+    <include
+        android:id="@+id/box77"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box64"
+        app:layout_constraintEnd_toStartOf="@+id/box76"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box78"
+        app:layout_constraintTop_toBottomOf="@+id/box84" />
+
+    <include
+        android:id="@+id/box76"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box65"
+        app:layout_constraintEnd_toStartOf="@+id/box75"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box77"
+        app:layout_constraintTop_toBottomOf="@+id/box85" />
+
+    <include
+        android:id="@+id/box75"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box66"
+        app:layout_constraintEnd_toStartOf="@+id/box74"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box76"
+        app:layout_constraintTop_toBottomOf="@+id/box86" />
+
+    <include
+        android:id="@+id/box74"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box67"
+        app:layout_constraintEnd_toStartOf="@+id/box73"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box75"
+        app:layout_constraintTop_toBottomOf="@+id/box87" />
+
+    <include
+        android:id="@+id/box73"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box68"
+        app:layout_constraintEnd_toStartOf="@+id/box72"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box74"
+        app:layout_constraintTop_toBottomOf="@+id/box88" />
+
+    <include
+        android:id="@+id/box72"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box69"
+        app:layout_constraintEnd_toStartOf="@+id/box71"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box73"
+        app:layout_constraintTop_toBottomOf="@+id/box89" />
+
+    <include
+        android:id="@+id/box71"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box72"
+        app:layout_constraintTop_toBottomOf="@+id/box90" />
+
+    <include
+        android:id="@+id/box61"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box60"
+        app:layout_constraintEnd_toStartOf="@+id/box62"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box80" />
+
+    <include
+        android:id="@+id/box62"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box59"
+        app:layout_constraintEnd_toStartOf="@+id/box63"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box61"
+        app:layout_constraintTop_toBottomOf="@+id/box79" />
+
+    <include
+        android:id="@+id/box63"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box58"
+        app:layout_constraintEnd_toStartOf="@+id/box64"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box62"
+        app:layout_constraintTop_toBottomOf="@+id/box78" />
+
+    <include
+        android:id="@+id/box64"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box57"
+        app:layout_constraintEnd_toStartOf="@+id/box65"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box63"
+        app:layout_constraintTop_toBottomOf="@+id/box77" />
+
+    <include
+        android:id="@+id/box65"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box56"
+        app:layout_constraintEnd_toStartOf="@+id/box66"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box64"
+        app:layout_constraintTop_toBottomOf="@+id/box76" />
+
+    <include
+        android:id="@+id/box66"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box55"
+        app:layout_constraintEnd_toStartOf="@+id/box67"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box65"
+        app:layout_constraintTop_toBottomOf="@+id/box75" />
+
+    <include
+        android:id="@+id/box67"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box54"
+        app:layout_constraintEnd_toStartOf="@+id/box68"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box66"
+        app:layout_constraintTop_toBottomOf="@+id/box74" />
+
+    <include
+        android:id="@+id/box68"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box53"
+        app:layout_constraintEnd_toStartOf="@+id/box69"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box67"
+        app:layout_constraintTop_toBottomOf="@+id/box73" />
+
+    <include
+        android:id="@+id/box69"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box52"
+        app:layout_constraintEnd_toStartOf="@+id/box70"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box68"
+        app:layout_constraintTop_toBottomOf="@+id/box72" />
+
+    <include
+        android:id="@+id/box70"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box69"
+        app:layout_constraintTop_toBottomOf="@+id/box71" />
+
+    <include
+        android:id="@+id/box60"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box41"
+        app:layout_constraintEnd_toStartOf="@+id/box59"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box61" />
+
+    <include
+        android:id="@+id/box59"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box42"
+        app:layout_constraintEnd_toStartOf="@+id/box58"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box60"
+        app:layout_constraintTop_toBottomOf="@+id/box62" />
+
+    <include
+        android:id="@+id/box58"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box43"
+        app:layout_constraintEnd_toStartOf="@+id/box57"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box59"
+        app:layout_constraintTop_toBottomOf="@+id/box63" />
+
+    <include
+        android:id="@+id/box57"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box44"
+        app:layout_constraintEnd_toStartOf="@+id/box56"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box58"
+        app:layout_constraintTop_toBottomOf="@+id/box64" />
+
+    <include
+        android:id="@+id/box56"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box45"
+        app:layout_constraintEnd_toStartOf="@+id/box55"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box57"
+        app:layout_constraintTop_toBottomOf="@+id/box65" />
+
+    <include
+        android:id="@+id/box55"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box46"
+        app:layout_constraintEnd_toStartOf="@+id/box54"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box56"
+        app:layout_constraintTop_toBottomOf="@+id/box66" />
+
+    <include
+        android:id="@+id/box54"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box47"
+        app:layout_constraintEnd_toStartOf="@+id/box53"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box55"
+        app:layout_constraintTop_toBottomOf="@+id/box67" />
+
+    <include
+        android:id="@+id/box53"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box48"
+        app:layout_constraintEnd_toStartOf="@+id/box52"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box54"
+        app:layout_constraintTop_toBottomOf="@+id/box68" />
+
+    <include
+        android:id="@+id/box52"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box49"
+        app:layout_constraintEnd_toStartOf="@+id/box51"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box53"
+        app:layout_constraintTop_toBottomOf="@+id/box69" />
+
+    <include
+        android:id="@+id/box51"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/box70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box52"
+        app:layout_constraintBottom_toTopOf="@+id/box50" />
+
+    <include
+        android:id="@+id/box41"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box40"
+        app:layout_constraintEnd_toStartOf="@+id/box42"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box60" />
+
+    <include
+        android:id="@+id/box42"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box39"
+        app:layout_constraintEnd_toStartOf="@+id/box43"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box41"
+        app:layout_constraintTop_toBottomOf="@+id/box59" />
+
+    <include
+        android:id="@+id/box43"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box38"
+        app:layout_constraintEnd_toStartOf="@+id/box44"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box42"
+        app:layout_constraintTop_toBottomOf="@+id/box58" />
+
+    <include
+        android:id="@+id/box44"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box37"
+        app:layout_constraintEnd_toStartOf="@+id/box45"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box43"
+        app:layout_constraintTop_toBottomOf="@+id/box57" />
+
+    <include
+        android:id="@+id/box45"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box36"
+        app:layout_constraintEnd_toStartOf="@+id/box46"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box44"
+        app:layout_constraintTop_toBottomOf="@+id/box56" />
+
+    <include
+        android:id="@+id/box46"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box35"
+        app:layout_constraintEnd_toStartOf="@+id/box47"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box45"
+        app:layout_constraintTop_toBottomOf="@+id/box55" />
+
+    <include
+        android:id="@+id/box47"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box34"
+        app:layout_constraintEnd_toStartOf="@+id/box48"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box46"
+        app:layout_constraintTop_toBottomOf="@+id/box54" />
+
+    <include
+        android:id="@+id/box48"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box33"
+        app:layout_constraintEnd_toStartOf="@+id/box49"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box47"
+        app:layout_constraintTop_toBottomOf="@+id/box53" />
+
+    <include
+        android:id="@+id/box49"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box32"
+        app:layout_constraintEnd_toStartOf="@+id/box50"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box48"
+        app:layout_constraintTop_toBottomOf="@+id/box52" />
+
+    <include
+        android:id="@+id/box50"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box31"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box49"
+        app:layout_constraintTop_toBottomOf="@+id/box51" />
+
+    <include
+        android:id="@+id/box40"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box21"
+        app:layout_constraintEnd_toStartOf="@+id/box39"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box41" />
+
+    <include
+        android:id="@+id/box39"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box22"
+        app:layout_constraintEnd_toStartOf="@+id/box38"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box40"
+        app:layout_constraintTop_toBottomOf="@+id/box42" />
+
+    <include
+        android:id="@+id/box38"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box23"
+        app:layout_constraintEnd_toStartOf="@+id/box37"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box39"
+        app:layout_constraintTop_toBottomOf="@+id/box43" />
+
+    <include
+        android:id="@+id/box37"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box24"
+        app:layout_constraintEnd_toStartOf="@+id/box36"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box38"
+        app:layout_constraintTop_toBottomOf="@+id/box44" />
+
+    <include
+        android:id="@+id/box36"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box25"
+        app:layout_constraintEnd_toStartOf="@+id/box35"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box37"
+        app:layout_constraintTop_toBottomOf="@+id/box45" />
+
+    <include
+        android:id="@+id/box35"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box26"
+        app:layout_constraintEnd_toStartOf="@+id/box34"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box36"
+        app:layout_constraintTop_toBottomOf="@+id/box46" />
+
+    <include
+        android:id="@+id/box34"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box27"
+        app:layout_constraintEnd_toStartOf="@+id/box33"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box35"
+        app:layout_constraintTop_toBottomOf="@+id/box47" />
+
+    <include
+        android:id="@+id/box33"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/box28"
+        app:layout_constraintEnd_toStartOf="@+id/box32"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/box34"
+        app:layout_constraintTop_toBottomOf="@+id/box48" />
+
+    <include
+        android:id="@+id/box32"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box29"
+        app:layout_constraintEnd_toStartOf="@+id/box31"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box33"
+        app:layout_constraintTop_toBottomOf="@+id/box49" />
+
+    <include
+        android:id="@+id/box31"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box32"
+        app:layout_constraintTop_toBottomOf="@+id/box50" />
+
+    <include
+        android:id="@+id/box21"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box20"
+        app:layout_constraintEnd_toStartOf="@+id/box22"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box40" />
+
+    <include
+        android:id="@+id/box22"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box19"
+        app:layout_constraintEnd_toStartOf="@+id/box23"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box21"
+        app:layout_constraintTop_toBottomOf="@+id/box39" />
+
+    <include
+        android:id="@+id/box23"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box18"
+        app:layout_constraintEnd_toStartOf="@+id/box24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box22"
+        app:layout_constraintTop_toBottomOf="@+id/box38" />
+
+    <include
+        android:id="@+id/box24"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box17"
+        app:layout_constraintEnd_toStartOf="@+id/box25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box23"
+        app:layout_constraintTop_toBottomOf="@+id/box37" />
+
+    <include
+        android:id="@+id/box25"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box16"
+        app:layout_constraintEnd_toStartOf="@+id/box26"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box24"
+        app:layout_constraintTop_toBottomOf="@+id/box36" />
+
+    <include
+        android:id="@+id/box26"
+        layout="@layout/item_game_box"
+        android:layout_width="116dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box15"
+        app:layout_constraintEnd_toStartOf="@+id/box27"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box25"
+        app:layout_constraintTop_toBottomOf="@+id/box35" />
+
+    <include
+        android:id="@+id/box27"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box14"
+        app:layout_constraintEnd_toStartOf="@+id/box28"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box26"
+        app:layout_constraintTop_toBottomOf="@+id/box34" />
+
+    <include
+        android:id="@+id/box28"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box13"
+        app:layout_constraintEnd_toStartOf="@+id/box29"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box27"
+        app:layout_constraintTop_toBottomOf="@+id/box33" />
+
+    <include
+        android:id="@+id/box29"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box12"
+        app:layout_constraintEnd_toStartOf="@+id/box30"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box28"
+        app:layout_constraintTop_toBottomOf="@+id/box32" />
+
+    <include
+        android:id="@+id/box30"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box29"
+        app:layout_constraintTop_toBottomOf="@+id/box31" />
+
+    <include
+        android:id="@+id/box20"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box1"
+        app:layout_constraintEnd_toStartOf="@+id/box19"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box21" />
+
+    <include
+        android:id="@+id/box19"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box2"
+        app:layout_constraintEnd_toStartOf="@+id/box18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box20"
+        app:layout_constraintTop_toBottomOf="@+id/box22" />
+
+    <include
+        android:id="@+id/box18"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box3"
+        app:layout_constraintEnd_toStartOf="@+id/box17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box19"
+        app:layout_constraintTop_toBottomOf="@+id/box23" />
+
+    <include
+        android:id="@+id/box17"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box4"
+        app:layout_constraintEnd_toStartOf="@+id/box16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box18"
+        app:layout_constraintTop_toBottomOf="@+id/box24" />
+
+    <include
+        android:id="@+id/box16"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box5"
+        app:layout_constraintEnd_toStartOf="@+id/box15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box17"
+        app:layout_constraintTop_toBottomOf="@+id/box25" />
+
+    <include
+        android:id="@+id/box15"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box6"
+        app:layout_constraintEnd_toStartOf="@+id/box14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box16"
+        app:layout_constraintTop_toBottomOf="@+id/box26" />
+
+    <include
+        android:id="@+id/box14"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box7"
+        app:layout_constraintEnd_toStartOf="@+id/box13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/box15"
+        app:layout_constraintTop_toBottomOf="@+id/box27" />
+
+    <include
+        android:id="@+id/box13"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box8"
+        app:layout_constraintEnd_toStartOf="@+id/box12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box14"
+        app:layout_constraintTop_toBottomOf="@+id/box28" />
+
+    <include
+        android:id="@+id/box12"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/box9"
+        app:layout_constraintEnd_toStartOf="@+id/box11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box13"
+        app:layout_constraintTop_toBottomOf="@+id/box29" />
+
+    <include
+        android:id="@+id/box11"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/box10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box12"
+        app:layout_constraintTop_toBottomOf="@+id/box30" />
+
+    <include
+        android:id="@+id/box1"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box20" />
+
+    <include
+        android:id="@+id/box2"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box1"
+        app:layout_constraintTop_toBottomOf="@+id/box19" />
+
+    <include
+        android:id="@+id/box3"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box2"
+        app:layout_constraintTop_toBottomOf="@+id/box18" />
+
+    <include
+        android:id="@+id/box4"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box3"
+        app:layout_constraintTop_toBottomOf="@+id/box17" />
+
+    <include
+        android:id="@+id/box5"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box4"
+        app:layout_constraintTop_toBottomOf="@+id/box16" />
+
+    <include
+        android:id="@+id/box6"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box5"
+        app:layout_constraintTop_toBottomOf="@+id/box15" />
+
+    <include
+        android:id="@+id/box7"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box6"
+        app:layout_constraintTop_toBottomOf="@+id/box14" />
+
+    <include
+        android:id="@+id/box8"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box7"
+        app:layout_constraintTop_toBottomOf="@+id/box13" />
+
+    <include
+        android:id="@+id/box9"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box8"
+        app:layout_constraintTop_toBottomOf="@+id/box12" />
+
+    <include
+        android:id="@+id/box10"
+        layout="@layout/item_game_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/box9"
+        app:layout_constraintTop_toBottomOf="@+id/box11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

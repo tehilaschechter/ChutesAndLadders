@@ -1,4 +1,4 @@
-package com.example.chutesandladders;
+package com.example.chutesandladders.model;
 
 public class Box {
     private int boxNumber;
