@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="box_oddNumber">#3CA5AC</color>
+    <color name="box_evenNumber">#FFD698</color>
+    <color name="box_shadow">#80000000</color>
 </resources>

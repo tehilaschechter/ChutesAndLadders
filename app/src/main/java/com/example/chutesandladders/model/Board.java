@@ -1,0 +1,114 @@
+package com.example.chutesandladders.model;
+
+import java.util.ArrayList;
+
+public class Board {
+
+    public static ArrayList<Box> getBoxes(){
+        return boardBoxList;
+    }
+
+    private static final ArrayList<Box> boardBoxList = new ArrayList<Box>() {{
+        add(new Box(100, false, false, false, false));
+        add(new Box(99, false, false, false, false));
+        add(new Box(98, false, false, false, false));
+        add(new Box(97, false, false, false, false));
+        add(new Box(96, false, false, false, false));
+        add(new Box(95, false, false, false, false));
+        add(new Box(94, false, false, false, false));
+        add(new Box(93, false, false, false, false));
+        add(new Box(92, false, false, false, false));
+        add(new Box(91, false, false, false, false));
+        add(new Box(81, false, false, false, false));
+        add(new Box(82, false, false, false, false));
+        add(new Box(83, false, false, false, false));
+        add(new Box(84, false, false, false, false));
+        add(new Box(85, false, false, false, false));
+        add(new Box(86, false, false, false, false));
+        add(new Box(87, false, false, false, false));
+        add(new Box(88, false, false, false, false));
+        add(new Box(89, false, false, false, false));
+        add(new Box(90, false, false, false, false));
+        add(new Box(80, false, false, false, false));
+        add(new Box(79, false, false, false, false));
+        add(new Box(78, false, false, false, false));
+        add(new Box(77, false, false, false, false));
+        add(new Box(76, false, false, false, false));
+        add(new Box(75, false, false, false, false));
+        add(new Box(74, false, false, false, false));
+        add(new Box(73, false, false, false, false));
+        add(new Box(72, false, false, false, false));
+        add(new Box(71, false, false, false, false));
+        add(new Box(61, false, false, false, false));
+        add(new Box(62, false, false, false, false));
+        add(new Box(63, false, false, false, false));
+        add(new Box(64, false, false, false, false));
+        add(new Box(65, false, false, false, false));
+        add(new Box(66, false, false, false, false));
+        add(new Box(67, false, false, false, false));
+        add(new Box(68, false, false, false, false));
+        add(new Box(69, false, false, false, false));
+        add(new Box(70, false, false, false, false));
+        add(new Box(60, false, false, false, false));
+        add(new Box(59, false, false, false, false));
+        add(new Box(58, false, false, false, false));
+        add(new Box(57, false, false, false, false));
+        add(new Box(56, false, false, false, false));
+        add(new Box(55, false, false, false, false));
+        add(new Box(54, false, false, false, false));
+        add(new Box(53, false, false, false, false));
+        add(new Box(52, false, false, false, false));
+        add(new Box(51, false, false, false, false));
+        add(new Box(41, false, false, false, false));
+        add(new Box(42, false, false, false, false));
+        add(new Box(43, false, false, false, false));
+        add(new Box(44, false, false, false, false));
+        add(new Box(45, false, false, false, false));
+        add(new Box(46, false, false, false, false));
+        add(new Box(47, false, false, false, false));
+        add(new Box(48, false, false, false, false));
+        add(new Box(49, false, false, false, false));
+        add(new Box(50, false, false, false, false));
+        add(new Box(40, false, false, false, false));
+        add(new Box(39, false, false, false, false));
+        add(new Box(38, false, false, false, false));
+        add(new Box(37, false, false, false, false));
+        add(new Box(36, false, false, false, false));
+        add(new Box(35, false, false, false, false));
+        add(new Box(34, false, false, false, false));
+        add(new Box(33, false, false, false, false));
+        add(new Box(32, false, false, false, false));
+        add(new Box(31, false, false, false, false));
+        add(new Box(21, false, false, false, false));
+        add(new Box(22, false, false, false, false));
+        add(new Box(23, false, false, false, false));
+        add(new Box(24, false, false, false, false));
+        add(new Box(25, false, false, false, false));
+        add(new Box(26, false, false, false, false));
+        add(new Box(27, false, false, false, false));
+        add(new Box(28, false, false, false, false));
+        add(new Box(29, false, false, false, false));
+        add(new Box(30, false, false, false, false));
+        add(new Box(20, false, false, false, false));
+        add(new Box(19, false, false, false, false));
+        add(new Box(18, false, false, false, false));
+        add(new Box(17, false, false, false, false));
+        add(new Box(16, false, false, false, false));
+        add(new Box(15, false, false, false, false));
+        add(new Box(14, false, false, false, false));
+        add(new Box(13, false, false, false, false));
+        add(new Box(12, false, false, false, false));
+        add(new Box(11, false, false, false, false));
+        add(new Box(1, false, false, false, false));
+        add(new Box(2, false, false, false, false));
+        add(new Box(3, false, false, false, false));
+        add(new Box(4, false, false, false, false));
+        add(new Box(5, false, false, false, false));
+        add(new Box(6, false, false, false, false));
+        add(new Box(7, false, false, false, false));
+        add(new Box(8, false, false, false, false));
+        add(new Box(9, false, false, false, false));
+        add(new Box(10, false, false, false, false));
+    }};
+
+}
