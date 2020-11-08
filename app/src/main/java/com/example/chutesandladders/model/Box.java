@@ -1,16 +1,23 @@
 package com.example.chutesandladders.model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 public class Box {
     private int boxNumber;
-    private boolean snakeBeginning;
-    private boolean ladderBeginning;
+    private int snakeBeginningHereGoesTo;
+    private int ladderBeginningHereGoesTo;
     private boolean isLast;
     private boolean isFreeTurn;
 
-    public Box(int boxNumber, boolean snakeBeginning, boolean ladderBeginning, boolean isLast, boolean isFreeTurn) {
+    public static final int NO_LADDER = 0;
+    public static final int NO_SNAKE = 0;
+
+    public Box(int boxNumber, int snakeBeginningHereGoesTo, int ladderBeginningHereGoesTo, boolean isLast, boolean isFreeTurn) {
         this.boxNumber = boxNumber;
-        this.snakeBeginning = snakeBeginning;
-        this.ladderBeginning = ladderBeginning;
+        this.snakeBeginningHereGoesTo = snakeBeginningHereGoesTo;
+        this.ladderBeginningHereGoesTo = ladderBeginningHereGoesTo;
         this.isLast = isLast;
         this.isFreeTurn = isFreeTurn;
     }
@@ -23,20 +30,20 @@ public class Box {
         this.boxNumber = boxNumber;
     }
 
-    public boolean isSnakeBeginning() {
-        return snakeBeginning;
+    public int getSnakeBeginningHereGoesTo() {
+        return snakeBeginningHereGoesTo;
     }
 
-    public void setSnakeBeginning(boolean snakeBeginning) {
-        this.snakeBeginning = snakeBeginning;
+    public void setSnakeBeginningHereGoesTo(int snakeBeginningHereGoesTo) {
+        this.snakeBeginningHereGoesTo = snakeBeginningHereGoesTo;
     }
 
-    public boolean isLadderBeginning() {
-        return ladderBeginning;
+    public int getLadderBeginningHereGoesTo() {
+        return ladderBeginningHereGoesTo;
     }
 
-    public void setLadderBeginning(boolean ladderBeginning) {
-        this.ladderBeginning = ladderBeginning;
+    public void setLadderBeginningHereGoesTo(int ladderBeginningHereGoesTo) {
+        this.ladderBeginningHereGoesTo = ladderBeginningHereGoesTo;
     }
 
     public boolean isLast() {

@@ -13,6 +13,6 @@ public class Die {
     }
 
     public int roll(){
-        return ThreadLocalRandom.current().nextInt(1, 7); // return random int between 1 and 6
+        return ThreadLocalRandom.current().nextInt(1, 7); // return random int between 1 and 6 // TODO SEED THIS RANDOM
     }
 }
