@@ -11,4 +11,7 @@
     <color name="box_oddNumber">#3CA5AC</color>
     <color name="box_evenNumber">#FFD698</color>
     <color name="box_shadow">#80000000</color>
+
+    <color name="game_background">#07ba4f</color>
+    <color name="die_background">#d71212</color>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.chutesandladders.model;
 
+import androidx.annotation.NonNull;
+
 public class Turn {
 
     private Player currentPlayer;
@@ -27,22 +29,29 @@ public class Turn {
     }
 
     private void advanceToNewBox(int newBoxNumber){
-        currentBox = Board.getBoxes().get(newBoxNumber - 1);
+        currentBox = Board.getBoxOfSpecificNumber(newBoxNumber);
     }
 
-    private void handleSnakeOrLadder(Box box){
-        if(box.getLadderBeginningHereGoesTo() != Box.NO_LADDER){
-            advanceToNewBox(box.getLadderBeginningHereGoesTo());
-        }
+    private void handleSnakeOrLadder(@NonNull Box box){
+        if (box != null) {
+            if(box.getLadderBeginningHereGoesTo() != Box.NO_LADDER){
+                advanceToNewBox(box.getLadderBeginningHereGoesTo());
+            }
 
-        if (box.getSnakeBeginningHereGoesTo() != Box.NO_SNAKE){
-            advanceToNewBox(box.getSnakeBeginningHereGoesTo());
+            if (box.getSnakeBeginningHereGoesTo() != Box.NO_SNAKE){
+                advanceToNewBox(box.getSnakeBeginningHereGoesTo());
+            }
         }
     }
 
     private boolean handleGameComplete(Box currentBox){
-        if(currentBox.isLast()){
-            return true;
+        if (currentBox != null) {
+            if(currentBox.isLast()){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
             return false;

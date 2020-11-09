@@ -5,7 +5,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/game_background">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvBoard"
@@ -20,6 +21,14 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:itemCount="100"
             tools:listitem="@layout/item_game_box"/>
+
+        <View
+            android:id="@+id/dieBackground"
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:background="@drawable/item_die_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
