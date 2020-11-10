@@ -7,13 +7,13 @@ import androidx.annotation.NonNull;
 public class Turn {
     private static final String TAG = "Turn";
 
-    private Player currentPlayer;
+    private final Player currentPlayer;
     private Box currentBox;
     private boolean gameComplete;
 
-    public Turn(Player currentPlayer, Box currentBox) {
+    public Turn(Player currentPlayer) {
         this.currentPlayer = currentPlayer;
-        this.currentBox = currentBox;
+        this.currentBox = Board.getBoxOfSpecificNumber(currentPlayer.getCurrentBoxNumber());
         this.gameComplete = false;
     }
 
@@ -34,6 +34,8 @@ public class Turn {
         else{
             currentBox = Board.getBoxOfSpecificNumber(Board.getBoxes().size());
         }
+
+        currentPlayer.setCurrentBoxNumber(currentBox.getBoxNumber());
 
     }
 

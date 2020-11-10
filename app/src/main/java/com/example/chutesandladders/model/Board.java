@@ -135,11 +135,9 @@ public class Board {
         else if(boxNumber > 80 && boxNumber <= 90){
             return boardBoxList.get(boxNumber - 71);
         }
-        else if(boxNumber == 0){
+        else {
             return new Box(0, 0, 0, false, false);
         }
-
-        return null;
     }
 
 }

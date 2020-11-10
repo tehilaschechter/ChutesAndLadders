@@ -1,20 +1,20 @@
 package com.example.chutesandladders.model;
 
 public class Player {
-    private int playerID;
+    private int playerIndex;
     private int currentBoxNumber;
 
-    public Player(int playerID, int currentBoxNumber) {
-        this.playerID = playerID;
+    public Player(int playerIndex, int currentBoxNumber) {
+        this.playerIndex = playerIndex;
         this.currentBoxNumber = currentBoxNumber;
     }
 
-    public int getPlayerID() {
-        return playerID;
+    public int getPlayerIndex() {
+        return playerIndex;
     }
 
-    public void setPlayerID(int playerID) {
-        this.playerID = playerID;
+    public void setPlayerIndex(int playerIndex) {
+        this.playerIndex = playerIndex;
     }
 
     public int getCurrentBoxNumber() {

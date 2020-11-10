@@ -5,7 +5,6 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -27,13 +26,15 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityGameRvBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_game_rv);
-        Player player1 = new Player(1, 0);
+        Player[] players = initializePlayers(3);
 
         // initialize LiveData
-        MutableLiveData<Boolean> gameComplete = new MutableLiveData<>();
+        final MutableLiveData<Boolean> gameComplete = new MutableLiveData<>();
         gameComplete.setValue(false);
+        final MutableLiveData<Player> currentPlayer = new MutableLiveData<>();
+        currentPlayer.setValue(players[0]);
         final MutableLiveData<Turn> currentTurn = new MutableLiveData<>();
-        currentTurn.setValue(new Turn(player1, Board.getBoxOfSpecificNumber(player1.getCurrentBoxNumber())));
+        currentTurn.setValue(new Turn(currentPlayer.getValue()));
 
         // set up UI
         initBoardRV(binding);
@@ -46,23 +47,42 @@ public class GameActivity extends AppCompatActivity {
                 Turn thisTurn = currentTurn.getValue();
 
                 if(!gameComplete.getValue()) {
-                    Log.d(TAG, "Taking turn: box#" + thisTurn.getCurrentBox().getBoxNumber() + " player:" + thisTurn.getCurrentPlayer().getPlayerID());
-                    currentTurn.setValue(thisTurn.takeTurn(numberRolled));
+                    Log.d(TAG, "Taking turn: box#" + thisTurn.getCurrentBox().getBoxNumber() + " player:" + thisTurn.getCurrentPlayer().getPlayerIndex());
+                    thisTurn.takeTurn(numberRolled);
 
                     if(thisTurn.isGameComplete()){
                         gameComplete.setValue(true);
                     }
-                    // todo switch players
+
+                    // switch players
+                    switchPlayers(currentPlayer, players);
+                    currentTurn.setValue(new Turn(currentPlayer.getValue()));
                 }
             }
         });
 
+        initObservers(binding, gameComplete, currentTurn, currentPlayer);
+
+    }
+
+    private Player[] initializePlayers(int numPlayers){
+        Player[] players = new Player[numPlayers];
+
+        for(int i = 0; i < numPlayers; i++){
+            players[i] = new Player(i, 0);
+        }
+
+        return players;
+    }
+
+    private void initObservers(com.example.chutesandladders.databinding.ActivityGameRvBinding binding,
+                               MutableLiveData<Boolean> gameComplete, MutableLiveData<Turn> currentTurn, MutableLiveData<Player> currentPlayer) {
         currentTurn.observe(this, new Observer<Turn>() {
             @Override
             public void onChanged(Turn turn) {
                 binding.txtCurrentPlayer.setText(String.format(
                         getString(R.string.currentPlayer),
-                        currentTurn.getValue().getCurrentPlayer().getPlayerID()));
+                        currentPlayer.getValue().getPlayerIndex()));
             }
         });
 
@@ -74,7 +94,6 @@ public class GameActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     private void initBoardRV(ActivityGameRvBinding binding){
@@ -83,9 +102,19 @@ public class GameActivity extends AppCompatActivity {
         binding.rvBoard.setLayoutManager(new GridLayoutManager(this, NUM_BOARD_COLUMNS));
     }
 
+    private void switchPlayers(MutableLiveData<Player> currentPlayer, Player[] players) {
+        int previousPlayerIndex = currentPlayer.getValue().getPlayerIndex();
+        if(previousPlayerIndex < (players.length - 1)){
+            currentPlayer.setValue(players[previousPlayerIndex + 1]);
+        }
+        else if(previousPlayerIndex == (players.length - 1)){
+            currentPlayer.setValue(players[0]);
+        }
+    }
+
     private void handleGameCompletion(com.example.chutesandladders.databinding.ActivityGameRvBinding binding, Turn finalTurn) {
         // display winner message
-        binding.txtGameComplete.setText(String.format(getString(R.string.gameComplete), finalTurn.getCurrentPlayer().getPlayerID()));
+        binding.txtGameComplete.setText(String.format(getString(R.string.gameComplete), finalTurn.getCurrentPlayer().getPlayerIndex()));
         binding.txtGameComplete.setVisibility(View.VISIBLE);
 
         // remove die click listener
