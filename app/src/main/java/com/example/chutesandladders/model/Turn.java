@@ -1,8 +1,11 @@
 package com.example.chutesandladders.model;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 public class Turn {
+    private static final String TAG = "Turn";
 
     private Player currentPlayer;
     private Box currentBox;
@@ -14,22 +17,24 @@ public class Turn {
         this.gameComplete = false;
     }
 
-    public Turn takeTurn(){
+    public Turn takeTurn(int numberRolled){
 
-        int dieNumber = rollDie();
-        advanceToNewBox(currentBox.getBoxNumber() + dieNumber);
+
+        advanceToNewBox(currentBox.getBoxNumber() + numberRolled);
         handleSnakeOrLadder(currentBox);
         gameComplete = handleGameComplete(currentBox);
 
         return this;
     }
 
-    private int rollDie(){
-        return new Die().roll();
-    }
-
     private void advanceToNewBox(int newBoxNumber){
-        currentBox = Board.getBoxOfSpecificNumber(newBoxNumber);
+        if(newBoxNumber < Board.getBoxes().size()){
+            currentBox = Board.getBoxOfSpecificNumber(newBoxNumber);
+        }
+        else{
+            currentBox = Board.getBoxOfSpecificNumber(Board.getBoxes().size());
+        }
+
     }
 
     private void handleSnakeOrLadder(@NonNull Box box){
