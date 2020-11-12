@@ -47,7 +47,7 @@ public class GameActivity extends AppCompatActivity {
                 Turn thisTurn = currentTurn.getValue();
 
                 if(!gameComplete.getValue()) {
-                    Log.d(TAG, "Taking turn: box#" + thisTurn.getCurrentBox().getBoxNumber() + " player:" + thisTurn.getCurrentPlayer().getPlayerIndex());
+                    Log.d(TAG, "Player: " + thisTurn.getCurrentPlayer().getPlayerIndex() + "is moving from box #" + thisTurn.getCurrentBox().getBoxNumber());
                     thisTurn.takeTurn(numberRolled);
 
                     if(thisTurn.isGameComplete()){
@@ -99,7 +99,17 @@ public class GameActivity extends AppCompatActivity {
     private void initBoardRV(ActivityGameRvBinding binding){
         BoardAdapter adapter = new BoardAdapter(Board.getBoxes(), this);
         binding.rvBoard.setAdapter(adapter);
-        binding.rvBoard.setLayoutManager(new GridLayoutManager(this, NUM_BOARD_COLUMNS));
+        binding.rvBoard.setLayoutManager(new GridLayoutManager(this, NUM_BOARD_COLUMNS){
+            @Override
+            public boolean canScrollHorizontally() {
+                return false;
+            }
+
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        });
     }
 
     private void switchPlayers(MutableLiveData<Player> currentPlayer, Player[] players) {

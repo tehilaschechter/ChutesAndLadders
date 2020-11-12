@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:color="@color/black"
-        android:width="1dp"/>
-    <solid
-        android:color="@color/box_oddNumber"/>
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow -->
+    <item>
+        <shape  android:shape="rectangle">
+            <corners android:radius="4.5dp" />
+            <gradient
+                android:startColor="@color/tile_shadow"
+                android:centerColor="@color/transparent"
+                android:endColor="@color/transparent"
+                android:angle="90"/>
+        </shape>
+    </item>
+
+    <!-- Tile color -->
+    <item
+        android:bottom="5dp"
+        android:right="5dp"
+        >
+        <shape>
+            <stroke android:color="@color/box_outline"
+                android:width="0.5dp"/>
+            <solid
+                android:color="@color/box_oddNumber"/>
+            <corners
+                android:radius="1.5dp"/>
+        </shape>
+    </item>
+</layer-list>

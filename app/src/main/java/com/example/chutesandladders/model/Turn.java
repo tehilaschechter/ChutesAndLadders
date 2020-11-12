@@ -35,6 +35,7 @@ public class Turn {
             currentBox = Board.getBoxOfSpecificNumber(Board.getBoxes().size());
         }
 
+        Log.d(TAG, "advanceToNewBox: moving to box #" + currentBox.getBoxNumber());
         currentPlayer.setCurrentBoxNumber(currentBox.getBoxNumber());
 
     }

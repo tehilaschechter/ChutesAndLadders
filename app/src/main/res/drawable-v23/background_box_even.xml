@@ -16,7 +16,7 @@
     <!-- Tile color -->
     <item
         android:bottom="5dp"
-        android:right="5dp"
+        android:end="5dp"
         >
         <shape>
             <stroke android:color="@color/box_outline"
