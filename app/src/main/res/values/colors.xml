@@ -17,4 +17,5 @@
     <color name="die_background">#d71212</color>
 
     <color name="tile_shadow">#40878787</color>
+    <color name="tile_number">#40000000</color>
 </resources>

@@ -1,22 +1,27 @@
 package com.example.chutesandladders.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
-import androidx.recyclerview.widget.GridLayoutManager;
-
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chutesandladders.R;
 import com.example.chutesandladders.databinding.ActivityGameRvBinding;
 import com.example.chutesandladders.model.Board;
 import com.example.chutesandladders.model.Die;
-import com.example.chutesandladders.model.Player;
 import com.example.chutesandladders.model.Turn;
 import com.example.chutesandladders.utils.BoardAdapter;
+import com.example.chutesandladders.viewmodel.GameActivityVM;
 
 public class GameActivity extends AppCompatActivity {
     private static final String TAG = "GameActivity";
@@ -26,80 +31,72 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityGameRvBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_game_rv);
-        Player[] players = initializePlayers(3);
-
-        // initialize LiveData
-        final MutableLiveData<Boolean> gameComplete = new MutableLiveData<>();
-        gameComplete.setValue(false);
-        final MutableLiveData<Player> currentPlayer = new MutableLiveData<>();
-        currentPlayer.setValue(players[0]);
-        final MutableLiveData<Turn> currentTurn = new MutableLiveData<>();
-        currentTurn.setValue(new Turn(currentPlayer.getValue()));
+        GameActivityVM viewmodel = new ViewModelProvider(this).get(GameActivityVM.class);
 
         // set up UI
         initBoardRV(binding);
 
+        // initialize vm variables
+        viewmodel.init(3);
+
         binding.dieBackground.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer numberRolled = new Die().roll();
-                binding.txtRolledNumber.setText(numberRolled.toString());
-                Turn thisTurn = currentTurn.getValue();
-
-                if(!gameComplete.getValue()) {
-                    Log.d(TAG, "Player: " + thisTurn.getCurrentPlayer().getPlayerIndex() + "is moving from box #" + thisTurn.getCurrentBox().getBoxNumber());
-                    thisTurn.takeTurn(numberRolled);
-
-                    if(thisTurn.isGameComplete()){
-                        gameComplete.setValue(true);
-                    }
-
-                    // switch players
-                    switchPlayers(currentPlayer, players);
-                    currentTurn.setValue(new Turn(currentPlayer.getValue()));
-                }
+                int numberRolled = new Die().roll();
+                binding.txtRolledNumber.setText(Integer.toString(numberRolled));
+                viewmodel.takeTurn(numberRolled);
             }
         });
 
-        initObservers(binding, gameComplete, currentTurn, currentPlayer);
+        initObservers(binding, viewmodel);
 
     }
 
-    private Player[] initializePlayers(int numPlayers){
-        Player[] players = new Player[numPlayers];
 
-        for(int i = 0; i < numPlayers; i++){
-            players[i] = new Player(i, 0);
-        }
 
-        return players;
+    private void addPlayerPiece(ActivityGameRvBinding binding) {
+        ConstraintLayout parentLayout = (ConstraintLayout)findViewById(R.id.constraintLayout);
+        ConstraintSet set = new ConstraintSet();
+
+        ImageView piece = new ImageView(this);
+        Drawable pieceDrawable = ContextCompat.getDrawable(this, R.drawable.item_player_piece);
+
+        //pieceDrawable.mutate().setColorFilter(new BlendModeColorFilter(color, BlendMode.SRC_OVER));
+        piece.setBackground(pieceDrawable);
+        piece.setId(View.generateViewId());
+        parentLayout.addView(piece, 0);
+
+        set.clone(parentLayout);
+        set.connect(piece.getId(), ConstraintSet.END, binding.rvBoard.getId(), ConstraintSet.START, 60);
+        set.connect(piece.getId(), ConstraintSet.BOTTOM, binding.rvBoard.getId(), ConstraintSet.BOTTOM, 0);
+        set.applyTo(parentLayout);
     }
 
     private void initObservers(com.example.chutesandladders.databinding.ActivityGameRvBinding binding,
-                               MutableLiveData<Boolean> gameComplete, MutableLiveData<Turn> currentTurn, MutableLiveData<Player> currentPlayer) {
-        currentTurn.observe(this, new Observer<Turn>() {
+                               GameActivityVM viewmodel) {
+        viewmodel.getCurrentTurn().observe(this, new Observer<Turn>() {
             @Override
             public void onChanged(Turn turn) {
                 binding.txtCurrentPlayer.setText(String.format(
                         getString(R.string.currentPlayer),
-                        currentPlayer.getValue().getPlayerIndex()));
+                        viewmodel.getCurrentPlayer().getValue().getPlayerIndex()));
             }
         });
 
-        gameComplete.observe(this, new Observer<Boolean>() {
+        viewmodel.getGameComplete().observe(this, new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean gameComplete) {
                 if(gameComplete){
-                    handleGameCompletion(binding, currentTurn.getValue());
+                    handleGameCompletion(binding, viewmodel.getCurrentTurn().getValue());
                 }
             }
         });
     }
 
-    private void initBoardRV(ActivityGameRvBinding binding){
+    private RecyclerView.LayoutManager initBoardRV(ActivityGameRvBinding binding){
         BoardAdapter adapter = new BoardAdapter(Board.getBoxes(), this);
         binding.rvBoard.setAdapter(adapter);
-        binding.rvBoard.setLayoutManager(new GridLayoutManager(this, NUM_BOARD_COLUMNS){
+        GridLayoutManager layoutManager = new GridLayoutManager(this, NUM_BOARD_COLUMNS){
             @Override
             public boolean canScrollHorizontally() {
                 return false;
@@ -109,17 +106,10 @@ public class GameActivity extends AppCompatActivity {
             public boolean canScrollVertically() {
                 return false;
             }
-        });
-    }
+        };
+        binding.rvBoard.setLayoutManager(layoutManager);
 
-    private void switchPlayers(MutableLiveData<Player> currentPlayer, Player[] players) {
-        int previousPlayerIndex = currentPlayer.getValue().getPlayerIndex();
-        if(previousPlayerIndex < (players.length - 1)){
-            currentPlayer.setValue(players[previousPlayerIndex + 1]);
-        }
-        else if(previousPlayerIndex == (players.length - 1)){
-            currentPlayer.setValue(players[0]);
-        }
+        return layoutManager;
     }
 
     private void handleGameCompletion(com.example.chutesandladders.databinding.ActivityGameRvBinding binding, Turn finalTurn) {
